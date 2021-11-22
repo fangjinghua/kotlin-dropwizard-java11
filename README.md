@@ -1,2 +1,13 @@
-# kotlin-dropwizard-java11
-Kotlin dropwizard app running on Java 11. With Guice injection loaded.
+# hello world
+
+How to start the hello world application
+---
+
+1. Run `mvn clean install` to build your application
+1. Start application with `java -jar target/dropwizard-kotlin-java11-1.0-SNAPSHOT.jar server config.yml`
+1. To check that your application is running enter url `http://localhost:8888`
+
+Health Check
+---
+
+To see your applications health enter url `http://localhost:8889/healthcheck`
