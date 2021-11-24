@@ -1,6 +1,7 @@
 package com.example
 
 import com.example.health.TemplateHealthCheck
+import com.example.resources.AgeResource
 import com.example.resources.ExampleResource
 import io.dropwizard.Application
 import io.dropwizard.setup.Bootstrap
@@ -29,6 +30,7 @@ class ExampleApplication : Application<ExampleConfiguration>() {
 
         env.healthChecks().register("template", healthCheck)
         env.jersey().register(ExampleResource::class.java)
+        env.jersey().register(AgeResource::class.java)
 
     }
 
