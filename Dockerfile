@@ -15,4 +15,4 @@ COPY --from=build /home/app/target/dropwizard-kotlin-java11-1.0-SNAPSHOT.jar /ho
 COPY --from=build /home/app/config.yml /home/app/target/config.yml
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","/home/app/target/invoice-file-convertor-service-1.0-SNAPSHOT.jar", "server", "/home/app/target/config.yml"]
+ENTRYPOINT ["java","-jar","/home/app/target/dropwizard-kotlin-java11-1.0-SNAPSHOT.jar", "server", "/home/app/target/config.yml"]
