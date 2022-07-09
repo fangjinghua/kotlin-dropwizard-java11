@@ -3,6 +3,15 @@ logging:
   loggers:
     com.example: DEBUG
 
+server:
+  applicationContextPath: /
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+
 template: Hello, %s!
 defaultName: Stranger
 customMap:
