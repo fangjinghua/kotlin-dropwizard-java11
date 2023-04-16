@@ -24,4 +24,12 @@ class ExampleResource @Inject constructor(private val configuration: ExampleConf
         val value = java.lang.String.format(configuration.template, name.or(configuration.customMap["first"] as String))
         return Saying(counter.incrementAndGet(), value)
     }
+
+    @Timed
+    @GET
+    @Path("/pause")
+    fun pause(): Saying {
+        Thread.sleep(10000)
+        return Saying(counter.incrementAndGet(), "let me slow down")
+    }
 }
